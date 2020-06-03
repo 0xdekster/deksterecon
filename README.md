@@ -8,7 +8,8 @@ Web Application recon automation , it aggregates your target results at one plac
 3- Install Apache web server - sudo apt install apache2 \
 4- git clone https://github.com/0xdekster/deksterecon.git \
 5- cd deksterecon\
-6- chmod +x install.sh
+6- chmod +x install.sh\
+7- ./install.sh
 
 
 # Usage - 
