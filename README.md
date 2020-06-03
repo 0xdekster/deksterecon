@@ -1,5 +1,6 @@
-# deksterecon
-Web Application recon automation , it aggregates your target results at one place so that the struggle of manually running tools will get removed and it helps to get a broader view of your attack surface.
+# DEKSTERECON
+Web Application recon automation , it aggregates your target results at one place so that the struggle of manually running each tool on single target/url will get removed and it helps to get a broader view of your attack surface.\
+It takes a target domain as an input from the user and it gives  - Screenshots, JS, endpoints, subdomains, Valid paths, xss parameters, check for ports , check for Subdomain takeover , etc..
 
 # Installation - 
 
