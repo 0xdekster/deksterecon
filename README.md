@@ -8,12 +8,12 @@ Web Application recon automation , it aggregates your target results at one plac
 3- Install Apache web server - sudo apt install apache2 \
 4- git clone https://github.com/0xdekster/deksterecon.git \
 5- cd deksterecon\
-6- chmod +x install.sh\
+6- chmod +x install.sh
 
 
-# Usage - \
+# Usage - 
 
-./deksterecon.sh target.com\
+./deksterecon.sh target.com
 
 # Thanks to the builders to these open-source tools\
 
@@ -22,4 +22,4 @@ Web Application recon automation , it aggregates your target results at one plac
 3- [Hahwul](https://github.com/hahwul/dalfox)\
 4- [Michen riksen](https://github.com/michenriksen/aquatone)\
 5- [Project Discovery](https://github.com/projectdiscovery)\
-6- [Corben Leo](https://github.com/projectdiscovery)\
+6- [Corben Leo](https://github.com/projectdiscovery)
