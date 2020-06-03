@@ -17,6 +17,8 @@ It takes a target domain as an input from the user and it gives  - Screenshots, 
 
 ./deksterecon.sh target.com
 
+![Screenshot](/screenshot.png)
+
 # Thanks to the builders to these open-source tools\
 
 1- [Eduard Tolosa](https://github.com/Edu4rdSHL/findomain)\
