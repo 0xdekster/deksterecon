@@ -13,7 +13,7 @@ EOF
 printf "\n"
 echo "$(tput setaf 2)Running Automation to gather data on" $1
 
-echo $1 | assetfinder -subs-only | grep -E "$1$" | anew | httprobe --prefer-https > $1.hosts.txt | /root/./findomain-linux -t $1 | anew | httprobe --prefer-https > $1.host$
+echo $1 | assetfinder -subs-only | grep -E "$1$" | anew | httprobe --prefer-https > $1.hosts.txt | /root/./findomain-linux -t $1 | anew | httprobe --prefer-https > $1.hosts.txt
 
 cat $1.hosts.txt | /root/./aquatone -out /var/www/html/$1/$1-aqua-out
 
