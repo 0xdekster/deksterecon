@@ -19,6 +19,10 @@ It takes a target domain as an input and performs reconnaissance on it and gives
 
 ./deksterecon.sh target.com
 
+# Result
+
+They will show at - /var/www/html/targetfolder
+
 ![Screenshot](/screenshot.png)
 
 # Thanks to the builders to these open-source tools
