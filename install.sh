@@ -16,10 +16,6 @@ echo "Installing Anew"
 go get -u github.com/tomnomnom/anew
 echo "done"
 
-echo "Installing Dirsearch"
-git clone https://github.com/maurosoria/dirsearch.git
-echo "done"
-
 echo "Installing Subjack"
 go get github.com/haccer/subjack
 echo "done"
