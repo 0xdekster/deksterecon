@@ -14,6 +14,9 @@ It takes a target domain as an input and performs reconnaissance on it and gives
 6- chmod +x install.sh\
 7- ./install.sh
 
+DO SET TOKENS FOR THE API'S YOU ARE USING
+
+findomain_virustotal_token="YourAccessToken" findomain -(options)
 
 # Usage - 
 
