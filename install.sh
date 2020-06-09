@@ -32,6 +32,10 @@ echo "Installing Gau"
 go get -u -v github.com/lc/gau
 echo "done"
 
+echo "Installing ffuf"
+go get github.com/ffuf/ffuf
+echo "done"
+
 echo "Installing Linkfinder"
 git clone https://github.com/GerbenJavado/LinkFinder.git
 cd LinkFinder
