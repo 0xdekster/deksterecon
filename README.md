@@ -20,7 +20,7 @@ findomain_virustotal_token="YourAccessToken" findomain -(options)
 
 # Usage - 
 
-./deksterecon.sh target.com
+./dekster.sh target.com
 
 # Result
 
