@@ -51,6 +51,10 @@ mv aquatone_linux_amd64_1.7.0.zip /usr/local/bin
 sudo apt install -y chromium-browser
 echo "done"
 
+echo "Installing Dirsearch"
+git clone https://github.com/maurosoria/dirsearch.git
+echo "done"
+
 echo "Installing Dalfox"
 wget https://github.com/hahwul/dalfox/releases/download/v1.1.3/dalfox-linux-amd64-1.1.3.tgz
 tar -xzvf dalfox-linux-amd64-1.1.3.tgz
