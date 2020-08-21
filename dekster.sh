@@ -14,7 +14,7 @@ printf "\n"
 echo "$(tput setaf 2)Running Automation to gather data on" $1
 
 mkdir /var/www/html/$1
-/root/./findomain-linux -t $1 | shuffledns -r /root/resolvers.txt | httprobe --prefer-https | anew /var/www/html/$1/$1-subdomains.txt
+shuffledns -r /root/resolvers.txt -d paytm.com -w /root/wordlist/subdomains.txt | anew /var/www/html/$1/$1-subdomains.txt | ./findomain-linux -t paytm.com | anew /var/www/html/$1/$1-subdomains.txt | subfinder -d paytm.com | anew /var/www/html/$1/$1-subdomains.txt | httprobe --prefer-https | anew /var/www/html/$1/$1-subdomains.txt
 cat /var/www/html/$1/$1-subdomains.txt | /root/tools/./aquatone -out /var/www/html/$1/$1-aqua-out
 sed -e 's|^[^/]*//||' -e 's|/.*$||' /var/www/html/$1/$1-subdomains.txt | naabu -Pn | tee -a /var/www/html/$1/ports-$1.txt
 nuclei -l /var/www/html/$1/$1-subdomains.txt -t /root/tools/nuclei-templates/*/*.yaml -o /var/www/html/$1/nuclei-$1.txt
