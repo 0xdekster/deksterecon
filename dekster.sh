@@ -5,7 +5,7 @@ echo "$(tput setaf 2)Running Automation to gather data on" $1
 mkdir /var/www/html/$1-$3
 $3 = unique string
 
-shuffledns -r /root/resolvers.txt -d $1 -w /root/wordlist/subdomains.txt | anew /var/www/html/$1-$3/$1-subs.txt | /root/./findomain-linux -t $1 | anew /var/www/html/$1-$3/$1-subs.txt | subfinder -d $1 | anew /var/www/html/$1-$3/$1-subs.txt | shuffledns -r /root/resolvers.txt | anew /var/www/html/$1-$3/$1-subs.txt
+shuffledns -r /resolvers.txt -d $1 -w /subdomains.txt | anew /var/www/html/$1-$3/$1-subs.txt | /root/./findomain-linux -t $1 | anew /var/www/html/$1-$3/$1-subs.txt | subfinder -d $1 | anew /var/www/html/$1-$3/$1-subs.txt | shuffledns -r /resolvers.txt | anew /var/www/html/$1-$3/$1-subs.txt
 
 if[$2 == port-scan]
 then
