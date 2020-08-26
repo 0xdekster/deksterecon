@@ -1,8 +1,4 @@
-echo "Installing required tools for Deksterecon"
-
-echo "Installing Assetfinder"
-go get -u github.com/tomnomnom/assetfinder
-echo "done"
+echo "Installing required tools for SecNote"
 
 echo "Installing Httprobe"
 go get -u github.com/tomnomnom/httprobe
@@ -20,23 +16,30 @@ echo "Installing Subjack"
 go get github.com/haccer/subjack
 echo "done"
 
-echo "Installing Nuclei"
-go get -u -v github.com/projectdiscovery/nuclei/cmd/nuclei
-echo "done"
-
 echo "Installing Naabu"
 go get -v github.com/projectdiscovery/naabu/cmd/naabu
+echo "done"
+
+echo "Installing Subfinder"
+go get -u -v github.com/projectdiscovery/subfinder/cmd/subfinder
+echo "done"
+
+echo "Installing MassDNS"
+git clone https://github.com/blechschmidt/massdns.git
+cd massdns
+make
+echo "done"
+
+echo "Installing Shuffledns"
+go get -u -v github.com/projectdiscovery/shuffledns/cmd/shuffledns
 echo "done"
 
 echo "Installing Gau"
 go get -u -v github.com/lc/gau
 echo "done"
 
-echo "Installing Linkfinder"
-git clone https://github.com/GerbenJavado/LinkFinder.git
-cd LinkFinder
-python3 setup.py install
-pip3 install -r requirements.txt
+echo "Installing Httpx"
+go get -u -v github.com/projectdiscovery/httpx/cmd/httpx
 echo "done"
 
 echo "Installing Findomain"
@@ -55,8 +58,3 @@ echo "Installing Dirsearch"
 git clone https://github.com/maurosoria/dirsearch.git
 echo "done"
 
-echo "Installing Dalfox"
-wget https://github.com/hahwul/dalfox/releases/download/v1.1.3/dalfox-linux-amd64-1.1.3.tgz
-tar -xzvf dalfox-linux-amd64-1.1.3.tgz
-mv dalfox /usr/local/bin
-echo "done"
