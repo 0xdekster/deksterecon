@@ -3,20 +3,20 @@
 echo "$(tput setaf 2)Running Automation to gather data on" $1
 
 mkdir /var/www/html/$1-$3
-$3 = unique string
 
 shuffledns -r /resolvers.txt -d $1 -w /subdomains.txt | anew /var/www/html/$1-$3/$1-subs.txt | /root/./findomain-linux -t $1 | anew /var/www/html/$1-$3/$1-subs.txt | subfinder -d $1 | anew /var/www/html/$1-$3/$1-subs.txt | shuffledns -r /resolvers.txt | anew /var/www/html/$1-$3/$1-subs.txt
 
-if[$2 == port-scan]
+if[$2 == port_scan]
 then
 sed -e 's|^[^/]*//||' -e 's|/.*$||' /var/www/html/$1-$3/$1-subdomains.txt | naabu -Pn | tee -a /var/www/html/$1-$3/ports-$1.txt
+exit 0;
 fi
 
 if[$2 == screenshots]
 then
 cat /var/www/html/$1-$3/$1-subdomains.txt | /root/tools/./aquatone -out /var/www/html/$1-$3/$1-aqua-out
+exit 0;
 fi
-
 
 sed -e 's|^[^/]*//||' -e 's|/.*$||' /var/www/html/$1-$3/$1-subs.txt | httprobe | anew /var/www/html/$1-$3/$1-subdomains.txt
 rm /var/www/html/$1-$3/$1-subs.txt
