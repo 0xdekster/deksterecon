@@ -24,7 +24,7 @@ fi
 if [[ "$2" == "full_scan" ]]
 then
 cat /var/www/html/$1-$3/$1-subdomains.txt | httpx -status-code -title -json -o /var/www/html/$1-$3/$1-Httpx-output.json
-cat /var/www/html/$1-$3/$1-subdomains.txt | /root/tools/./aquatone -out /var/www/html/$1-$3/$1-aqua-out
+cat /var/www/html/$1-$3/$1-subdomains.txt | aquatone -out /var/www/html/$1-$3/$1-aqua-out
 sed -e 's|^[^/]*//||' -e 's|/.*$||' /var/www/html/$1-$3/$1-subdomains.txt | naabu -Pn | tee -a /var/www/html/$1-$3/ports-$1.txt
 subjack -w /var/www/html/$1-$3/$1-subdomains.txt -t 100 -timeout 30 -o /var/www/html/$1-$3/subjack-$1.txt -ssl -c /root/tools/subjack/fingerprints.json
 for url in `cat /var/www/html/$1-$3/$1-subdomains.txt`; do gau $url | grep "\.js" | anew /var/www/html/$1-$3/js-$1.txt; done
