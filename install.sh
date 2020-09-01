@@ -28,8 +28,8 @@ echo "Installing MassDNS"
 git clone https://github.com/blechschmidt/massdns.git
 cd massdns
 make
-mv massdns/bin/massdns /usr/local/bin/
 cd ..
+mv massdns/bin/massdns /usr/local/bin/
 echo "done"
 
 echo "Installing Shuffledns"
@@ -52,7 +52,7 @@ echo "done"
 echo "Installing Aquatone"
 wget https://github.com/michenriksen/aquatone/releases/download/v1.7.0/aquatone_linux_amd64_1.7.0.zip
 unzip aquatone_linux_amd64_1.7.0.zip
-mv aquatone
+mv aquatone /usr/local/bin
 sudo apt install -y chromium-browser
 echo "done"
 
