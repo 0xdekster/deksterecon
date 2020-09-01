@@ -17,7 +17,7 @@ fi
 
 if [[ "$2" == "screenshots" ]]
 then
-cat /var/www/html/$1-$3/$1-subdomains.txt | /root/tools/./aquatone -out /var/www/html/$1-$3/$1-aqua-out;
+cat /var/www/html/$1-$3/$1-subdomains.txt | aquatone -out /var/www/html/$1-$3/$1-aqua-out;
 exit 0;
 fi
 
