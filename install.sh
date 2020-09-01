@@ -51,7 +51,7 @@ echo "done"
 echo "Installing Aquatone"
 wget https://github.com/michenriksen/aquatone/releases/download/v1.7.0/aquatone_linux_amd64_1.7.0.zip
 unzip aquatone_linux_amd64_1.7.0.zip
-mv aquatone_linux_amd64_1.7.0.zip /usr/local/bin
+mv aquatone
 sudo apt install -y chromium-browser
 echo "done"
 
