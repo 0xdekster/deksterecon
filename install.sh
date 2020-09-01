@@ -28,6 +28,7 @@ echo "Installing MassDNS"
 git clone https://github.com/blechschmidt/massdns.git
 cd massdns
 make
+mv massdns/bin/massdns /usr/local/bin/
 cd ..
 echo "done"
 
