@@ -65,4 +65,6 @@ git clone https://github.com/projectdiscovery/nuclei.git
 cd nuclei/cmd/nuclei/ 
 go build 
 mv nuclei /usr/local/bin/
-cd ..
+cd ../../../
+nuclei -update-templates
+echo "done"
