@@ -60,3 +60,9 @@ echo "Installing Dirsearch"
 git clone https://github.com/maurosoria/dirsearch.git
 echo "done"
 
+echo "Installing Nuclei"
+git clone https://github.com/projectdiscovery/nuclei.git
+cd nuclei/cmd/nuclei/ 
+go build 
+mv nuclei /usr/local/bin/
+cd ..
