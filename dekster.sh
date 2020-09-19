@@ -23,8 +23,10 @@ fi
 
 if [[ "$2" == "full_scan" ]]
 then
-cd dirsearch && python3 ./dirsearch.py --url-list=/var/www/html/$1-$3/$1-subdomains.txt -e php,html,js,jar -x 301,302,401,503,407,402,400,403,404,500,405,407,429,406,504,503,502,403,308 --plain-text-report=/var/www/html/$1-$3/$1-dirsearch.txt;
-cd ..
+#cd dirsearch && python3 ./dirsearch.py --url-list=/var/www/html/$1-$3/$1-subdomains.txt -e php,html,js,jar -x 301,302,401,503,407,402,400,403,404,500,405,407,429,406,504,503,502,403,308 --plain-text-report=/var/www/html/$1-$3/$1-dirsearch.txt;
+#cd ..
+for url in `cat /var/www/html/$1-$3/$1-subdomains.txt`; do ffuf -u $url/FUZZ -mc 200 -w ./fuzz.txt -o /var/www/html/$1-$3/$1-dirsearch.json | anew /var/www/html/$1-$3/$1-dirsearchPaths.txt;done
+rm /var/www/html/$1-$3/$1-dirsearch.json
 cat /var/www/html/$1-$3/$1-subdomains.txt | httpx -status-code -title -json -o /var/www/html/$1-$3/$1-Httpx-output.json
 cat /var/www/html/$1-$3/$1-subdomains.txt | aquatone -out /var/www/html/$1-$3/$1-aqua-out
 sed -e 's|^[^/]*//||' -e 's|/.*$||' /var/www/html/$1-$3/$1-subdomains.txt | naabu | tee -a /var/www/html/$1-$3/ports-$1.txt
