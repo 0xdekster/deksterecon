@@ -23,7 +23,7 @@ fi
 
 if [[ "$2" == "full_scan" ]]
 then
-cd dirsearch && python3 ./dirsearch.py --url-list=/var/www/html/$1-$3/$1-subdomains.txt -e php,html,js,jar -s 0.4 -x 301,302,401,503,407,402,400,403,404,500,405,407,429,406,504,503,502,403,308 --plain-text-report=/var/www/html/$1-$3/$1-dirsearch.txt;
+cd dirsearch && python3 ./dirsearch.py --url-list=/var/www/html/$1-$3/$1-subdomains.txt -e php,html,js,jar -s 0.1 -t 30 -x 301,302,401,503,407,402,400,403,404,500,405,407,429,406,504,503,502,403,308 --plain-text-report=/var/www/html/$1-$3/$1-dirsearch.txt;
 cd ..
 cat /var/www/html/$1-$3/$1-subdomains.txt | httpx -status-code -title -json -o /var/www/html/$1-$3/$1-Httpx-output.json
 cat /var/www/html/$1-$3/$1-subdomains.txt | aquatone -out /var/www/html/$1-$3/$1-aqua-out
