@@ -54,5 +54,5 @@ echo "done"
 
 echo "Installing Dirsearch"
 git clone https://github.com/maurosoria/dirsearch.git
-#(cd dirsearch && git checkout f93c33b1c1cb83d4b281bc2d0e18b4550d6cb17f)
+(cd dirsearch && git checkout f93c33b1c1cb83d4b281bc2d0e18b4550d6cb17f)
 echo "done"
