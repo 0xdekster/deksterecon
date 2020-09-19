@@ -12,10 +12,6 @@ echo "Installing Anew"
 go get -u github.com/tomnomnom/anew
 echo "done"
 
-echo "Installing ffuf"
-go get github.com/ffuf/ffuf
-echo "done"
-
 echo "Installing Naabu"
 go get -v github.com/projectdiscovery/naabu/cmd/naabu
 echo "done"
