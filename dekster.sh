@@ -6,7 +6,7 @@ mkdir /var/www/html/$1-$3
 
 shuffledns -r ./resolvers.txt -d $1 -w ./subdomains.txt | anew /var/www/html/$1-$3/$1-subs.txt | ./findomain-linux -t $1 | anew /var/www/html/$1-$3/$1-subs.txt | subfinder -d $1 | anew /var/www/html/$1-$3/$1-subs.txt | shuffledns -r ./resolvers.txt | anew /var/www/html/$1-$3/$1-subs.txt
 
-sed -e 's|^[^/]*//||' -e 's|/.*$||' /var/www/html/$1-$3/$1-subs.txt | httprobe | anew /var/www/html/$1-$3/$1-subdomains.txt
+sed -e 's|^[^/]*//||' -e 's|/.*$||' /var/www/html/$1-$3/$1-subs.txt | httprobe --prefer-https | anew /var/www/html/$1-$3/$1-subdomains.txt
 rm /var/www/html/$1-$3/$1-subs.txt
 
 if [[ "$2" == "port_scan" ]]
