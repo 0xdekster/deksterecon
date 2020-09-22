@@ -22,8 +22,7 @@ fi
 
 if [[ "$2" == "full_scan" ]]
 then
-cd dirsearch && cat /var/www/html/$1-$3/$1-subdomains.txt | xargs -I@ sh -c 'python3 dirsearch.py -r -b -x 301,302,400,403,400,429,307,305 -u @ -e php,html,json,aspx' --plain-text-report=/var/www/html/$1-$3/$1-dirsearch.txt
-cd ..
+python3 /dirsearch/dirsearch.py --url-list=/var/www/html/$1-$3/$1-subdomains.txt -e php,html,json,aspx -b -x 301,302,400,403,400,429,307,305 --plain-text-report=/var/www/html/$1-$3/$1-dirsearch.txt
 cat /var/www/html/$1-$3/$1-subdomains.txt | httpx -status-code -title -json -o /var/www/html/$1-$3/$1-Httpx-output.json
 cat /var/www/html/$1-$3/$1-subdomains.txt | aquatone -out /var/www/html/$1-$3/$1-aqua-out
 sed -e 's|^[^/]*//||' -e 's|/.*$||' /var/www/html/$1-$3/$1-subdomains.txt | naabu | tee -a /var/www/html/$1-$3/ports-$1.txt
