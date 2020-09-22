@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 echo "$(tput setaf 2)Running Automation to gather data on" $1
 
