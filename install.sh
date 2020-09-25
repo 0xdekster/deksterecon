@@ -13,11 +13,15 @@ go get -u github.com/tomnomnom/anew
 echo "done"
 
 echo "Installing Naabu"
-go get -v github.com/projectdiscovery/naabu/cmd/naabu
+go get -u -v github.com/projectdiscovery/naabu/v2/cmd/naabu
 echo "done"
 
 echo "Installing Subfinder"
-go get -u -v github.com/projectdiscovery/subfinder/cmd/subfinder
+git clone https://github.com/projectdiscovery/subfinder.git
+cd subfinder/v2/cmd/subfinder
+go build .
+mv subfinder /usr/local/bin/
+cd ../../../../
 echo "done"
 
 echo "Installing MassDNS"
