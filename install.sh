@@ -12,13 +12,6 @@ echo "Installing Anew"
 go get -u github.com/tomnomnom/anew
 echo "done"
 
-echo "Installing Amass"
-go get -v github.com/OWASP/Amass/v3/...
-cd /root/go/src/github.com/OWASP/Amass
-go install ./...
-cd /deksterecon/
-echo "done"
-
 echo "Installing Naabu"
 go get -u -v github.com/projectdiscovery/naabu/v2/cmd/naabu
 echo "done"
@@ -65,4 +58,11 @@ echo "done"
 
 echo "Installing Dirsearch"
 git clone https://github.com/maurosoria/dirsearch.git
+echo "done"
+
+echo "Installing Amass"
+go get -v github.com/OWASP/Amass/v3/...
+cd /root/go/src/github.com/OWASP/Amass
+go install ./...
+cd /deksterecon/
 echo "done"
