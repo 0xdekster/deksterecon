@@ -17,6 +17,7 @@ go get -v github.com/OWASP/Amass/v3/...
 cd /root/go/src/github.com/OWASP/Amass
 go install ./...
 cd ../../../../../../
+cd /deksterecon/
 echo "done"
 
 echo "Installing Naabu"
