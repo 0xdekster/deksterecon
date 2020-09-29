@@ -14,9 +14,9 @@ echo "done"
 
 echo "Installing Amass"
 go get -v github.com/OWASP/Amass/v3/...
-cd /root/src/github.com/OWASP/Amass
+cd /root/go/src/github.com/OWASP/Amass
 go install ./...
-cd ../../../../../
+cd ../../../../../../
 echo "done"
 
 echo "Installing Naabu"
