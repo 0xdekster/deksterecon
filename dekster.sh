@@ -4,7 +4,7 @@ echo "$(tput setaf 2)Running Automation to gather data on" $1
 
 mkdir /var/www/html/$1-$3
 
-amass enum -passive -d $1 | tee -a /var/www/html/$1-$3/$1-subs.txt | subfinder -d $1 | anew /var/www/html/$1-$3/$1-subs.txt
+amass enum -passive -d $1 -c ./amass-config.ini | tee -a /var/www/html/$1-$3/$1-subs.txt | subfinder -d $1 | anew /var/www/html/$1-$3/$1-subs.txt
 cat /var/www/html/$1-$3/$1-subs.txt | httprobe --prefer-https | anew /var/www/html/$1-$3/$1-subdomains.txt
 rm /var/www/html/$1-$3/$1-subs.txt
 
