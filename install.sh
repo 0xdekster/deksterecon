@@ -59,3 +59,10 @@ echo "done"
 echo "Installing Dirsearch"
 git clone https://github.com/maurosoria/dirsearch.git
 echo "done"
+
+echo "Installing Amass"
+go get -v github.com/OWASP/Amass/v3/...
+cd /root/go/src/github.com/OWASP/Amass
+go install ./...
+cd /deksterecon/
+echo "done"
