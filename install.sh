@@ -12,6 +12,10 @@ echo "Installing Anew"
 go get -u github.com/tomnomnom/anew
 echo "done"
 
+echo "Installing urllib"
+pip3 install urllib3
+echo "done"
+
 echo "Installing Naabu"
 go get -u -v github.com/projectdiscovery/naabu/v2/cmd/naabu
 echo "done"
