@@ -13,7 +13,10 @@ go get -u github.com/tomnomnom/anew
 echo "done"
 
 echo "Installing urllib"
+apt install python3-pip
 pip3 install urllib3
+pip3 install chardet
+pip3 install certifi
 echo "done"
 
 echo "Installing Naabu"
