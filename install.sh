@@ -13,7 +13,7 @@ go get -u github.com/tomnomnom/anew
 echo "done"
 
 echo "Installing urllib"
-sudo yum install -y python36u python36u-libs python36u-devel python36u-pip
+apt-get update && apt-get install -y python3-pip
 pip3 install urllib3
 pip3 install chardet
 pip3 install certifi
