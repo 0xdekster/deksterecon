@@ -64,7 +64,7 @@ sudo apt install -y chromium-browser
 echo "done"
 
 echo "Installing Dirsearch"
-git clone https://github.com/maurosoria/dirsearch.git
+git clone https://github.com/TheBinitGhimire/dirsearch.git
 echo "done"
 
 echo "Installing Amass"
