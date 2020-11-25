@@ -12,13 +12,6 @@ echo "Installing Anew"
 go get -u github.com/tomnomnom/anew
 echo "done"
 
-echo "Installing urllib"
-apt-get update && apt-get install -y python3-pip
-pip3 install urllib3
-pip3 install chardet
-pip3 install certifi
-echo "done"
-
 echo "Installing Naabu"
 go get -u -v github.com/projectdiscovery/naabu/v2/cmd/naabu
 echo "done"
@@ -65,6 +58,9 @@ echo "done"
 
 echo "Installing Dirsearch"
 git clone https://github.com/TheBinitGhimire/dirsearch.git
+cd dirsearch/
+pip3 install -r requirements.txt
+cd ..
 echo "done"
 
 echo "Installing Amass"
