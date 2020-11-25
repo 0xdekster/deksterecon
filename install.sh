@@ -64,7 +64,7 @@ sudo apt install -y chromium-browser
 echo "done"
 
 echo "Installing Dirsearch"
-git clone https://github.com/TheBinitGhimire/dirsearch.git
+git clone https://github.com/maurosoria/dirsearch.git
 cd dirsearch/
 pip3 install -r requirements.txt
 cd ..
