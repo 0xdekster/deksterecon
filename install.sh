@@ -40,6 +40,10 @@ echo "Installing Gau"
 go get -u -v github.com/lc/gau
 echo "done"
 
+echo "Installing PIP"
+apt install python3-pip
+echo "done"
+
 echo "Installing Httpx"
 go get -u -v github.com/projectdiscovery/httpx/cmd/httpx
 echo "done"
@@ -58,6 +62,9 @@ echo "done"
 
 echo "Installing Dirsearch"
 git clone https://github.com/maurosoria/dirsearch.git
+cd dirsearch/
+pip3 install -r requirements.txt
+cd ..
 echo "done"
 
 echo "Installing Amass"
