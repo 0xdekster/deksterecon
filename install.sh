@@ -41,7 +41,10 @@ go get -u -v github.com/lc/gau
 echo "done"
 
 echo "Installing PIP"
-apt install python3-pip
+apt-get update && apt-get install -y python3-pip
+pip3 install chardet
+pip3 install urllib3
+pip3 install certifi
 echo "done"
 
 echo "Installing Httpx"
@@ -65,12 +68,6 @@ git clone https://github.com/maurosoria/dirsearch.git
 cd dirsearch/
 pip3 install -r requirements.txt
 cd ..
-echo "done"
-
-echo "Installing modules"
-pip3 install chardet
-pip3 install urllib3
-pip3 install certifi
 echo "done"
 
 echo "Installing Amass"
