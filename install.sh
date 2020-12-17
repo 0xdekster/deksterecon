@@ -67,6 +67,12 @@ pip3 install -r requirements.txt
 cd ..
 echo "done"
 
+echo "Installing modules"
+pip3 install chardet
+pip3 install urllib3
+pip3 install certifi
+echo "done"
+
 echo "Installing Amass"
 go get -v github.com/OWASP/Amass/v3/...
 cd /root/go/src/github.com/OWASP/Amass
