@@ -1,5 +1,12 @@
 echo "Installing required tools for SecNote"
 
+
+echo "Installing Go"
+wget https://golang.org/dl/go1.15.6.linux-amd64.tar.gz
+tar -C /usr/local -xzf go1.15.6.linux-amd64.tar.gz
+export PATH=$PATH:/usr/local/go/bin
+echo "done"
+
 echo "Installing Httprobe"
 go get -u github.com/tomnomnom/httprobe
 echo "done"
@@ -45,6 +52,7 @@ apt-get update && apt-get install -y python3-pip
 pip3 install chardet
 pip3 install urllib3
 pip3 install certifi
+apt-get install libpcap-dev
 echo "done"
 
 echo "Installing Httpx"
@@ -68,12 +76,6 @@ git clone https://github.com/maurosoria/dirsearch.git
 cd dirsearch/
 pip3 install -r requirements.txt
 cd ..
-echo "done"
-
-echo "Installing Go"
-wget https://golang.org/dl/go1.15.6.linux-amd64.tar.gz
-tar -C /usr/local -xzf go1.15.6.linux-amd64.tar.gz
-export PATH=$PATH:/usr/local/go/bin
 echo "done"
 
 echo "Installing Amass"
