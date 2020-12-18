@@ -7,6 +7,14 @@ tar -C /usr/local -xzf go1.15.6.linux-amd64.tar.gz
 export PATH=$PATH:/usr/local/go/bin
 echo "done"
 
+echo "Installing PIP"
+apt-get update && apt-get install -y python3-pip
+pip3 install chardet
+pip3 install urllib3
+pip3 install certifi
+apt-get install libpcap-dev
+echo "done"
+
 echo "Installing Httprobe"
 go get -u github.com/tomnomnom/httprobe
 echo "done"
@@ -45,14 +53,6 @@ echo "done"
 
 echo "Installing Gau"
 go get -u -v github.com/lc/gau
-echo "done"
-
-echo "Installing PIP"
-apt-get update && apt-get install -y python3-pip
-pip3 install chardet
-pip3 install urllib3
-pip3 install certifi
-apt-get install libpcap-dev
 echo "done"
 
 echo "Installing Httpx"
