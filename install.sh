@@ -70,6 +70,12 @@ pip3 install -r requirements.txt
 cd ..
 echo "done"
 
+echo "Installing Go"
+wget https://golang.org/dl/go1.15.6.linux-amd64.tar.gz
+tar -C /usr/local -xzf go1.15.6.linux-amd64.tar.gz
+export PATH=$PATH:/usr/local/go/bin
+echo "done"
+
 echo "Installing Amass"
 go get -v github.com/OWASP/Amass/v3/...
 cd /root/go/src/github.com/OWASP/Amass
