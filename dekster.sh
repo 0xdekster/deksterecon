@@ -22,11 +22,11 @@ fi
 
 if [[ "$2" == "full_scan" ]]
 then
-(python3 dirsearch/dirsearch.py --url-list /var/www/html/$1-$3/$1-subdomains.txt -e php,html -r -b -x 301,302,400,403,400,429,307,503,500,305,412,502 --plain-text-report=/var/www/html/$1-$3/$1-dirsearch.txt)
 cat /var/www/html/$1-$3/$1-subdomains.txt | httpx -status-code -title -json -o /var/www/html/$1-$3/$1-Httpx-output.json
 cat /var/www/html/$1-$3/$1-subdomains.txt | aquatone -out /var/www/html/$1-$3/$1-aqua-out
 sed -e 's|^[^/]*//||' -e 's|/.*$||' /var/www/html/$1-$3/$1-subdomains.txt | naabu | tee -a /var/www/html/$1-$3/ports-$1.txt
 for url in `cat /var/www/html/$1-$3/$1-subdomains.txt`; do gau $url | grep "\.js" | anew /var/www/html/$1-$3/js-$1.txt; done
+(python3 dirsearch/dirsearch.py --url-list /var/www/html/$1-$3/$1-subdomains.txt -e php,html -r -b -x 301,302,400,403,400,429,307,503,500,305,412,502 --plain-text-report=/var/www/html/$1-$3/$1-dirsearch.txt)
 cat /var/www/html/$1-$3/$1-dirsearch.txt | anew /var/www/html/$1-$3/$1-dirsearchPaths.txt;
 rm /var/www/html/$1-$3/$1-dirsearch.txt;
 exit 0;
