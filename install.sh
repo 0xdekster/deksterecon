@@ -12,7 +12,7 @@ apt-get update && apt-get install -y python3-pip
 pip3 install chardet
 pip3 install urllib3
 pip3 install certifi
-apt-get install libpcap-dev
+apt-get install -y libpcap-dev
 echo "done"
 
 echo "Installing Httprobe"
